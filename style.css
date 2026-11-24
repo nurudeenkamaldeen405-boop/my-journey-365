@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #10101c;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+header {
+    background: #19192b;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 2px solid #7048e8;
+}
+
+header h2 {
+    font-size: 25px;
+}
+
+header span {
+    color: #9b7aff;
+}
+
+header p {
+    color: #aaa;
+    font-size: 13px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    background: #19192b;
+}
+
+button {
+    background: #7048e8;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #8968f5;
+}
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 15px;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #b49aff;
+}
+
+h2 {
+    margin: 20px 0 12px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.card {
+    background: #1d1d32;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #343451;
+}
+
+.card h3 {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.card h2 {
+    color: #a98bff;
+    font-size: 30px;
+}
+
+form {
+    background: #1d1d32;
+    padding: 22px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin: 15px 0 7px;
+    color: #c9baff;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 7px;
+    border: 1px solid #44445e;
+    background: #121222;
+    color: white;
+    outline: none;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+form button {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#journalRecords > div,
+#goalList > div,
+#recentActivities > div {
+    background: #1d1d32;
+    padding: 18px;
+    border-radius: 10px;
+    margin: 12px 0;
+    border-left: 4px solid #7048e8;
+    overflow-wrap: anywhere;
+}
+
+.record-date {
+    color: #a98bff;
+    font-size: 13px;
+}
+
+.delete-btn {
+    background: #c03950;
+    margin-top: 12px;
+}
+
+.delete-btn:hover {
+    background: #e04d64;
+}
+
+#analysisText {
+    background: #1d1d32;
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 2;
+}
+
+canvas {
+    background: #1d1d32;
+    padding: 15px;
+    border-radius: 12px;
+    width: 100%;
+    max-height: 350px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    background: #19192b;
+    color: #aaa;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+
+    header h2 {
+        font-size: 21px;
+    }
+
+    nav button {
+        flex: 1 1 40%;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+}
