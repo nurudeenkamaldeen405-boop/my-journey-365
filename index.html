@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Journey 365</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>MY JOURNEY <span>365</span></h2>
+        <p>Documenting my life. Measuring my growth.</p>
+    </header>
+
+    <nav>
+        <button onclick="showSection('dashboard')">Dashboard</button>
+        <button onclick="showSection('journal')">Daily Journal</button>
+        <button onclick="showSection('goals')">My Goals</button>
+        <button onclick="showSection('analytics')">Analytics</button>
+    </nav>
+
+    <main>
+
+        <!-- DASHBOARD -->
+
+        <section id="dashboard" class="section active">
+
+            <h1>My Progress</h1>
+            <p>Welcome to your personal growth dashboard.</p>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Total Records</h3>
+                    <h2 id="totalRecords">0</h2>
+                </div>
+
+                <div class="card">
+                    <h3>Achievements</h3>
+                    <h2 id="totalAchievements">0</h2>
+                </div>
+
+                <div class="card">
+                    <h3>Goals Completed</h3>
+                    <h2 id="completedGoals">0</h2>
+                </div>
+
+                <div class="card">
+                    <h3>Active Days</h3>
+                    <h2 id="activeDays">0</h2>
+                </div>
+
+            </div>
+
+            <h2>Recent Activities</h2>
+            <div id="recentActivities"></div>
+
+        </section>
+
+
+        <!-- DAILY JOURNAL -->
+
+        <section id="journal" class="section">
+
+            <h1>Daily Journal</h1>
+
+            <form id="journalForm">
+
+                <label>Date</label>
+                <input type="date" id="date" required>
+
+                <label>Category</label>
+                <select id="category">
+                    <option>Education</option>
+                    <option>Forex Trading</option>
+                    <option>Programming</option>
+                    <option>Personal Development</option>
+                    <option>Finance</option>
+                    <option>Other</option>
+                </select>
+
+                <label>What did I achieve?</label>
+                <textarea id="achievement" placeholder="Write your achievements..."></textarea>
+
+                <label>What did I learn?</label>
+                <textarea id="learning" placeholder="What did you learn today?"></textarea>
+
+                <label>What went wrong?</label>
+                <textarea id="mistake" placeholder="Record your mistakes..."></textarea>
+
+                <label>What should I improve?</label>
+                <textarea id="improvement" placeholder="What will you improve tomorrow?"></textarea>
+
+                <button type="submit">Save Today's Record</button>
+
+            </form>
+
+            <h2>My Records</h2>
+            <div id="journalRecords"></div>
+
+        </section>
+
+
+        <!-- GOALS -->
+
+        <section id="goals" class="section">
+
+            <h1>My Goals</h1>
+
+            <form id="goalForm">
+
+                <label>Goal</label>
+                <input type="text" id="goalName" placeholder="Enter your goal..." required>
+
+                <label>Deadline</label>
+                <input type="date" id="goalDeadline">
+
+                <button type="submit">Add Goal</button>
+
+            </form>
+
+            <div id="goalList"></div>
+
+        </section>
+
+
+        <!-- ANALYTICS -->
+
+        <section id="analytics" class="section">
+
+            <h1>My Growth Analysis</h1>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>This Week</h3>
+                    <h2 id="weeklyProgress">0</h2>
+                    <p>Activities recorded</p>
+                </div>
+
+                <div class="card">
+                    <h3>This Month</h3>
+                    <h2 id="monthlyProgress">0</h2>
+                    <p>Activities recorded</p>
+                </div>
+
+                <div class="card">
+                    <h3>This Year</h3>
+                    <h2 id="yearlyProgress">0</h2>
+                    <p>Activities recorded</p>
+                </div>
+
+            </div>
+
+            <h2>My Progress Chart</h2>
+
+            <canvas id="progressChart"></canvas>
+
+            <h2>My Overall Review</h2>
+
+            <div id="analysisText"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>MY JOURNEY 365 © 2026</p>
+        <p>Small steps. Big achievements.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+  </html>
